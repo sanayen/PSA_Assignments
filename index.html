@@ -1,0 +1,396 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+	<link rel="icon" type="image/x-icon" href="portfolio.jpg">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLocaleLowerCase().indexOf(value) > -1)
+                })
+            })
+
+        })
+    </script>
+	<style>
+		 
+	.footer {
+		text-align: center;
+		font-style: italic;
+		background-color: #000000;
+		padding: 2px;
+	}
+	</style>
+</head>
+
+<body>
+
+     <!-- 1.carousel -->
+   
+	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="neha.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Neha Sanaye</h5>
+        <p>Software Developer.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="neha1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Neha Sanaye</h5>
+        <p>Full Stack Developer.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="neha2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Neha Sanaye</h5>
+        <p>Software Engineer.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <!-- carousel -->
+
+
+    <!--2.navbar -->
+    <nav class="navbar navbar-expand-lg bg-light" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Picture Slides</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#section01">Proficiencies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section02">Academics</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#section03">Work Experience</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#section04">Skills</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#section05">Contact Me</a>
+                    </li>
+                   
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" id="myInput" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!--3.Grid-->
+    <div class="container" style="padding-top: 60px;">
+  <div class="row">
+    <h4>About Me:</h4>
+    
+    <div class="col">
+		<div><img src="profileImage.jpg" style="height:400px;border-radius:70%;border: 7px double white;"></div>
+		<h5>Software Developer - Java | Spring/Spring boot | JPA/Hibernate I Microservices</h5>
+		<h6>Boston,Massachussettes</h6>
+    </div>
+	<div class="col">
+		<h5>Profile Summary:</h5>
+		<h6>Result oriented software professional with 4.5 years of progressive experience in
+			designing and developing multi-tier enterprise web applications using Java EE and
+			open source technologies
+		<!--4.List-->
+		<ol class="list-group list-group-numbered"  style="padding-top: 20px;">
+		  <li class="list-group-item"> Strong experience in Enterprise and Web Application Development</li>
+		  <li class="list-group-item">Proven work experience on Open source frameworks Spring, Spring Boot</li>
+		  <li class="list-group-item">Good knowledge of Web Server like Apache Tomcat and application servers JBoss</li>
+		  <li class="list-group-item">Good knowledge of SQL and Oracle DB</li>
+		  <li class="list-group-item">Experience with developing estimates for projects and tasks.</li>
+		  <li class="list-group-item">Experience in operating on Scrum team and Agile SDLC.</li>
+		</ol>
+		<!--4.List-->
+		</h6>
+    </div>
+
+  </div>
+   
+  </div>
+
+<!--Grid-->
+   
+
+    <!--5.Cards -->
+    <div id="section01" class="container" style="padding-top: 100px;">
+        <h4>Language Proficiencies</h4>
+        <div class="row" style="padding-top: 10px;">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="spring.png" class="card-img-top" height="300px" width="20px" alt="...">
+                   
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="sql.png" class="card-img-top" alt="...">
+                   
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="java.png" class="card-img-top" height="300px" width="20px" alt="...">
+                   
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="html.png" class="card-img-top" height="300px" width="20px" alt="...">
+                   
+                </div>
+            </div>
+		</div>
+
+    </div>
+
+    <!--6.Table -->
+
+    <div id="section02" class="container" style="padding-top: 100px;">
+    <h4>Acadecmics</h4>
+        <table class="table" style="padding-top: 10px;">
+            <thead>
+                <tr>
+                    <th scope="col">Sr no</th>
+                    <th scope="col">Institute</th>
+                    <th scope="col">Major</th>
+                    <th scope="col">Passing Year</th>
+					<th scope="col">GPA</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Northeastern University</td>
+                    <td>Information Systems</td>
+                    <td>2023</td>
+					<td>3/4</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Ramrao Adik Institute of Technology</td>
+                    <td>Information Technology</td>
+                    <td>2016</td>
+					<td>8.6/10</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>State Board,Secondary</td>
+					<td>Science</td>
+					<td>2012</td>
+                    <td>7.8/10</td>
+                </tr>
+				<tr>
+                    <th scope="row">4</th>
+                    <td>State Board,Primary</td>
+					<td>Science</td>
+					
+					<td>2010</td>
+                    <td>9.2/10</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+  
+    <!--7.Accordian -->
+    <div id="section03" class="container" style="padding-top: 50px;">
+    <h4>Work Experience & Projects</h4>
+
+        <div class="accordion" id="accordionExample" style="padding-top: 20px;">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accenture
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>4.Blockchain POC
+								Role : Java Backend and Chaincode Developer
+								Domain: ERP-OM
+								Blockchain POC provides a distributed and decentralized platform to the involved parties to
+								manage the end to end Order to Cash cycle using blockchain technology,thus providing
+								transparency and security to involved activities.
+								Responsibilities:
+								● Developed ERP payment web application using Java Servlet MVC framework.
+								● Research on Blockchain fundamentals and Worked on Hyperledger fabric( Blockchain
+								IDE) to deliver a working Web Application POC based on Order to Cash Business
+								model. Developed chaincode in Golang language to put, update,delete and read data
+								from ledgers, implemented CSV file data loading, etc.
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Deloitte
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>3. Scandinavian Airlines
+									Role: Oracle Technical Consultant
+									Domain: ERP-Finance
+									Responsibilities:
+									● Worked on SQL queries and PL/SQL fundamentals.
+									● Resolve issues and interact with clients to provide
+									solutions and data extractions using complex sql
+									queries.
+									Environment: SQL,PLSQL,Oracle
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        TCS
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>1. ORDERING
+
+								1.CHAMP
+								Role: Full Stack Developer
+								Domain: BFSI
+								CHAMP is a Fund Management web application for forecasting and handling an institution's
+								cash flow.
+								Responsibilities:
+								● Requirement analysis and gathering
+								● Worked on HTML, CSS and Bootstrap for page design and JavaScript for form
+								validation, error handling and event handling.
+								● Worked on Struts Hibernate integrated framework and complex HQL queries.
+								● Applied Java Collections (List,HashMap),Exception handling,Inheritance/Interface
+								concepts for problem solving and defect fixing.
+								● Studied various techniques of web performance tuning, optimized SQL query and
+								restructured the existing design to improve web page performance.
+								● Defect fixing and maintenance of the application.
+								Environment: JAV,struts,hibernate,sql,html,css,javascript,jquery
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!--7.Accordian -->
+
+    <!--8.Progress bar -->
+    <div id="section04" class="container" style="padding-top: 100px;">
+        <h4>Skills & Proficiencies </h4>
+        <h6>Springboot</h6>
+		<div class="progress">
+		<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemax="100">90%</div>
+		</div>
+		<h6>Java</h6>
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+		</div>
+		<h6>SQL</h6>
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">90%</div>
+		</div>
+        <h6>HTML & CSS</h6>
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+		</div>
+        <h6>Software Engineering</h6>
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+		</div>
+
+    </div>
+    <!--Progress bar -->
+
+    <!--9.Form-->
+
+	<div  id="section05" style="width:600px;margin-left:110px;padding-top: 100px;padding-bottom: 100px;">
+	<h4>Contact Me</h4>
+		<div class="mb-3" 
+		<label for="exampleFormControlInput1" class="form-label">Email address</label>
+		<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+		</div>
+		<div class="mb-3">
+		  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+		  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		</div>
+		 <!--10.Buttons-->
+		<input class="btn btn-primary" type="submit" value="Submit">
+		<input class="btn btn-primary" type="reset" value="Reset">
+		 <!--9.Buttons-->
+	</div>
+	<!--Form-->
+
+	
+<footer class="footer">
+  <p style="color:white;">mail to : <a href="mailto:nsanaye21@gmail.com" style="color:white;">nsanaye21@gmail.com</a></p>
+  <p style="color:white;">Telephone no. :<a href="tel:555-666-7777" style="color:white;">555-666-7777</a></p>
+
+  <p style="padding:10px;"><a href="https://www.linkedin.com/in/neha-sanaye/"><img src="linkedin.png" style="height:30px;border-radius:100%;"></a>
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><img src="gmailicon.png" style="height:30px;border-radius:100%;;"></a>
+	<a href="https://outlook.office365.com/mail/"><img src="linkedin.png" style="height:30px;border-radius:100%;"></a>
+
+  </p>
+</footer>
+
+
+</body>
+
+</html>
